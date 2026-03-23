@@ -2,41 +2,21 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("===MENSAJE DE VOZ===");
-        //Variables
-        int opc;
-        Console.Write("MENU PRINCIPAL-KUN\n");
-        Console.Write("1-Recepcion\n");
-        Console.Write("2-Vigilancia\n");
-        Console.Write("3-Mantenimiento\n");
-        Console.Write("4-SALIR-CHAN\n");
-        Console.Write("Digite una opcion []:");
-        opc = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Promedio de notas");
+        int n1, n2, n3, n4, n5;
+        string materia;
+        Console.WriteLine("Digite la Materia:");
+        materia = Console.ReadLine();
+        Console.Write("Digite 5 notas:");
+        n1 = Convert.ToInt32(Console.ReadLine());
+        n2 = Convert.ToInt32(Console.ReadLine());
+        n3 = Convert.ToInt32(Console.ReadLine());
+        n4 = Convert.ToInt32(Console.ReadLine());
+        n5 = Convert.ToInt32(Console.ReadLine());
 
-        //Condiciones
-        if (opc == 1)
-        {
-            Console.Clear();
-            Console.WriteLine("Bienvenido al Depto.Recepcion");
-        }
-        if (opc == 2)
-        {
-            Console.Clear();
-            Console.WriteLine("Bienvenido al Depto.Vigilancia");
-        }
-        if (opc == 3)
-        {
-            Console.Clear();
-            Console.WriteLine("Bienvenido al Depto.Mantenimiento");
-        }
-        if (opc != 1 && opc != 2 && opc != 3)
-        {
-            Console.Clear();
-            Console.WriteLine("Saliendo del Sistema");
-        }
-
-        //Limpiar pantalla
-        Console.Clear();
-
+        double promedio = (n1 + n2 + n3 + n4 + n5) / 5;
+        Console.WriteLine("La materia:" + materia);
+        Console.WriteLine("El promedio:" + promedio);
     }
+
 }
